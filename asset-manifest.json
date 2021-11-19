@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/workers-app/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/workers-app/static/js/main.b074c658.chunk.js",
+    "main.js.map": "/workers-app/static/js/main.b074c658.chunk.js.map",
+    "runtime-main.js": "/workers-app/static/js/runtime-main.81753288.js",
+    "runtime-main.js.map": "/workers-app/static/js/runtime-main.81753288.js.map",
+    "static/js/2.a4b5caf4.chunk.js": "/workers-app/static/js/2.a4b5caf4.chunk.js",
+    "static/js/2.a4b5caf4.chunk.js.map": "/workers-app/static/js/2.a4b5caf4.chunk.js.map",
+    "static/js/3.a2680a7c.chunk.js": "/workers-app/static/js/3.a2680a7c.chunk.js",
+    "static/js/3.a2680a7c.chunk.js.map": "/workers-app/static/js/3.a2680a7c.chunk.js.map",
+    "index.html": "/workers-app/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/workers-app/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.a4b5caf4.chunk.js.LICENSE.txt": "/workers-app/static/js/2.a4b5caf4.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/workers-app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81753288.js",
+    "static/js/2.a4b5caf4.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.b074c658.chunk.js"
+  ]
+}
