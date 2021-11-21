@@ -38,4 +38,10 @@ export const Section = styled.section`
   span {
     font-size: 12px;
   }
+  .active {
+    color: blue;
+  }
+  .unactive {
+    color: black;
+  }
 `;

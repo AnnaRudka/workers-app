@@ -5,6 +5,7 @@ import { addUsers, deleteUsers} from '../redux/usersSlice';
 
 const ListItem = ({ id, firstName, lastName, dob, activeUsers}) => {
     const [select, setSelect] = useState("notActive");
+    const [styled, setStyled] = useState("inactive");
     const dispatch = useDispatch();
 
     //Too many re-renders. React limits the number of renders to prevent an infinite loop.
@@ -16,10 +17,8 @@ const ListItem = ({ id, firstName, lastName, dob, activeUsers}) => {
     const value = event.target.value;
       setSelect(value);
       if (value === 'active') {
-          console.log('+++', id);
-          //const userMonth = new Date(dob).toLocaleString('en-US', { month: 'long' });
+          setStyled("active");
           const userDob = `${new Date(dob).getDate()} ${ new Date(dob).toLocaleString('en-US', { month: 'long' })}, ${new Date(dob).getFullYear()} year`;
-          console.log(userDob);
           dispatch(addUsers({
               id,
               firstName,
@@ -28,7 +27,7 @@ const ListItem = ({ id, firstName, lastName, dob, activeUsers}) => {
               userDob,
             }));  
       } else {
-          console.log( '---', id);
+          setStyled("activated");
           dispatch(deleteUsers({
                 id
             }));  
@@ -37,7 +36,7 @@ const ListItem = ({ id, firstName, lastName, dob, activeUsers}) => {
  
     return (
         <li>
-            <div>{firstName} {lastName}</div>
+            <div className={styled}>{firstName} {lastName}</div>
             <form>
                 <div>
                     <input type="radio" id="сhoice1" value="notActive" checked={select === "notActive"} onChange={event => handleSelectChange(event)} />
