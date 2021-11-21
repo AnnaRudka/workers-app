@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { createGlobalStyle } from "styled-components";
+import "./App.css";
+import { Route, HashRouter as Router } from "react-router-dom";
+import EmployeesList from "./components/EmployeesList";
+import EmployeesBirthday from "./components/EmployeesBirthday";
+import { Wrapper } from "./styles";
+
+const Global = createGlobalStyle`
+  *, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: sans-serif;
+  }
+  a{
+    text-decoration:none;
+  }
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Global />
+      <Router>
+        <Route path="/employees">
+          <Wrapper>
+            <EmployeesList />
+            <EmployeesBirthday />
+          </Wrapper>
+        </Route>
+      </Router>
     </div>
   );
 }
