@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/workers-app/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/workers-app/static/js/main.21084fdf.chunk.js",
-    "main.js.map": "/workers-app/static/js/main.21084fdf.chunk.js.map",
+    "main.js": "/workers-app/static/js/main.52d6a5b3.chunk.js",
+    "main.js.map": "/workers-app/static/js/main.52d6a5b3.chunk.js.map",
     "runtime-main.js": "/workers-app/static/js/runtime-main.48e23443.js",
     "runtime-main.js.map": "/workers-app/static/js/runtime-main.48e23443.js.map",
-    "static/js/2.369d9844.chunk.js": "/workers-app/static/js/2.369d9844.chunk.js",
-    "static/js/2.369d9844.chunk.js.map": "/workers-app/static/js/2.369d9844.chunk.js.map",
+    "static/js/2.25feb71f.chunk.js": "/workers-app/static/js/2.25feb71f.chunk.js",
+    "static/js/2.25feb71f.chunk.js.map": "/workers-app/static/js/2.25feb71f.chunk.js.map",
     "index.html": "/workers-app/index.html",
     "static/css/main.8c8b27cf.chunk.css.map": "/workers-app/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.369d9844.chunk.js.LICENSE.txt": "/workers-app/static/js/2.369d9844.chunk.js.LICENSE.txt"
+    "static/js/2.25feb71f.chunk.js.LICENSE.txt": "/workers-app/static/js/2.25feb71f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.48e23443.js",
-    "static/js/2.369d9844.chunk.js",
+    "static/js/2.25feb71f.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.21084fdf.chunk.js"
+    "static/js/main.52d6a5b3.chunk.js"
   ]
 }
