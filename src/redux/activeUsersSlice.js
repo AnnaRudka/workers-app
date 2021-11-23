@@ -1,13 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 let initialState = [];
 
-const reduxState = JSON.parse(localStorage.getItem("reduxState"));
+const reduxState = JSON.parse(localStorage.getItem('reduxState'));
 
 if (reduxState) initialState = reduxState.activeUsers || initialState;
 
 export const slice = createSlice({
-  name: "activeUsers",
+  name: 'activeUsers',
   initialState: initialState,
   reducers: {
     addActiveUsers: (state, action) => {
@@ -16,8 +16,8 @@ export const slice = createSlice({
     },
     deleteActiveUsers: (state, action) => {
       state.splice(
-        state.findIndex((item) => item.id === action.payload.id),
-        1
+        state.findIndex(item => item.id === action.payload.id),
+        1,
       );
       return state;
     },
@@ -26,6 +26,6 @@ export const slice = createSlice({
 
 export const { addActiveUsers, deleteActiveUsers } = slice.actions;
 
-export const selectActiveUsers = (state) => state.activeUsers;
+export const selectActiveUsers = state => state.activeUsers;
 
 export default slice.reducer;

@@ -1,12 +1,12 @@
-import { createGlobalStyle } from "styled-components";
-import "./App.css";
-import { Route, HashRouter as Router } from "react-router-dom";
-import EmployeesList from "./components/EmployeesList";
-import EmployeesBirthday from "./components/EmployeesBirthday";
-import { Wrapper } from "./styles";
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { setUsers } from "./redux/usersSlice";
+import { createGlobalStyle } from 'styled-components';
+import './App.css';
+import { Route, HashRouter as Router } from 'react-router-dom';
+import EmployeesList from './components/EmployeesList';
+import EmployeesBirthday from './components/EmployeesBirthday';
+import { Wrapper } from './styles';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { setUsers } from './redux/usersSlice';
 
 const Global = createGlobalStyle`
   *, *::before, *::after{
@@ -27,14 +27,14 @@ function App() {
 
   async function getUsers() {
     const apiUrl =
-      "https://yalantis-react-school-api.yalantis.com/api/task0/users";
+      'https://yalantis-react-school-api.yalantis.com/api/task0/users';
     await axios
       .get(apiUrl)
-      .then((resp) => {
+      .then(resp => {
         const data = resp.data;
-        data.map((user) => dispatch(setUsers(user)));
+        data.map(user => dispatch(setUsers(user)));
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
       });
   }

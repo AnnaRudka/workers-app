@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
 
 export const Section = styled.section`
   width: 50%;
-  height: 100vh;
   border-right: 1px solid #dbdbdb;
   background-color: #ffffff;
   .section-header {
