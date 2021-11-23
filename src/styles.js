@@ -10,12 +10,14 @@ export const Wrapper = styled.div`
 export const Section = styled.section`
   width: 50%;
   height: 100vh;
-  overflow-y: "scroll";
   border-right: 1px solid #dbdbdb;
   background-color: #ffffff;
   .section-header {
     padding: 15px;
     border-bottom: 1px solid #dbdbdb;
+    @media (max-width: 515px) {
+      min-height: 90px;
+    }
   }
   .section-content {
     display: flex;
@@ -24,16 +26,29 @@ export const Section = styled.section`
     justify-content: space-between;
   }
   .letter-card {
-    width: 25%;
-    padding: 15px;
+    width: 33%;
+    padding: 10px 20px;
     text-align: left;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    @media (min-width: 767px) and (max-width: 1023px) {
+      width: 50%;
+    }
   }
   ul {
     list-style: none;
   }
-  form {
+  li {
+    padding: 5px 0;
+  }
+  label {
     font-size: 12px;
     padding: 5px 10px;
+  }
+  .empty-message {
+    padding: 20px;
+    text-align: center;
   }
   span {
     font-size: 12px;

@@ -4,6 +4,9 @@ import { Route, HashRouter as Router } from "react-router-dom";
 import EmployeesList from "./components/EmployeesList";
 import EmployeesBirthday from "./components/EmployeesBirthday";
 import { Wrapper } from "./styles";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setUsers } from "./redux/usersSlice";
 
 const Global = createGlobalStyle`
   *, *::before, *::after{
@@ -20,6 +23,23 @@ const Global = createGlobalStyle`
 `;
 
 function App() {
+  const dispatch = useDispatch();
+
+  async function getUsers() {
+    const apiUrl =
+      "https://yalantis-react-school-api.yalantis.com/api/task0/users";
+    await axios
+      .get(apiUrl)
+      .then((resp) => {
+        const data = resp.data;
+        data.map((user) => dispatch(setUsers(user)));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  getUsers();
+
   return (
     <div className="App">
       <Global />
