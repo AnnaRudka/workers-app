@@ -3,37 +3,10 @@ import { useSelector } from 'react-redux';
 import { selectActiveUsers } from '../redux/activeUsersSlice';
 import { selectUsers } from '../redux/usersSlice';
 import { Section } from '../styles';
-import ListItem from './ListItem';
+import Employee from './Employee';
+import { letterList } from '../constants/constants';
 
 const EmployeesList = () => {
-  const letterList = [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z',
-  ];
   const users = useSelector(selectUsers);
   const usersList = [...users]
     .sort((a, b) => a.firstName.localeCompare(b.firstName))
@@ -50,21 +23,21 @@ const EmployeesList = () => {
 
   return (
     <Section>
-      <h1 className="section-header">Employees</h1>
+      <h2 className="section-header">Employees</h2>
       <div className="section-content">
         {letterList.map((letter, index) =>
           usersList.hasOwnProperty(letter) ? (
             <div key={index} className="letter-card">
-              <h2>{letter}</h2>
+              <h3>{letter}</h3>
               <ul>
                 {usersList[letter].map(user => (
-                  <ListItem {...user} key={user.id} activeUsers={activeUsers} />
+                  <Employee {...user} key={user.id} activeUsers={activeUsers} />
                 ))}
               </ul>
             </div>
           ) : (
             <div key={index} className="letter-card">
-              <h2>{letter}</h2>
+              <h3>{letter}</h3>
               <p> No Employees</p>
             </div>
           ),

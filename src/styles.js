@@ -13,6 +13,7 @@ export const Section = styled.section`
   background-color: #ffffff;
   .section-header {
     padding: 15px;
+    text-align: center;
     border-bottom: 1px solid #dbdbdb;
     @media (max-width: 515px) {
       min-height: 90px;
@@ -48,6 +49,7 @@ export const Section = styled.section`
   .empty-message {
     padding: 20px;
     text-align: center;
+    font-weight: 500;
   }
   span {
     font-size: 12px;

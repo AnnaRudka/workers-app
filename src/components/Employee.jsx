@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { addActiveUsers, deleteActiveUsers } from '../redux/activeUsersSlice';
 
-const ListItem = ({ id, firstName, lastName, dob, activeUsers }) => {
+const Employee = ({ id, firstName, lastName, dob, activeUsers }) => {
   const dispatch = useDispatch();
   const isActive = activeUsers.includes(id);
 
@@ -28,9 +28,9 @@ const ListItem = ({ id, firstName, lastName, dob, activeUsers }) => {
 
   return (
     <li>
-      <div className={isActive ? 'active' : 'unactive'}>
+      <p className={isActive ? 'active' : 'unactive'}>
         {firstName} {lastName}
-      </div>
+      </p>
       <form>
         <div>
           <input
@@ -57,9 +57,9 @@ const ListItem = ({ id, firstName, lastName, dob, activeUsers }) => {
   );
 };
 
-export default ListItem;
+export default Employee;
 
-ListItem.defaultProps = {
+Employee.defaultProps = {
   id: '',
   firstName: '',
   lastName: '',
@@ -67,7 +67,7 @@ ListItem.defaultProps = {
   activeUsers: [],
 };
 
-ListItem.propTypes = {
+Employee.propTypes = {
   id: PropTypes.string.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
